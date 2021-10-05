@@ -1,32 +1,51 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app class="fondo">
+    <AppBar />
+    <Drawer />
+
+    <transition name="vista" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import AppBar from './components/AppBar'
+import Drawer from './components/Drawer'
 
-#nav {
-  padding: 30px;
+import { mapMutations, mapState } from "vuex";
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+export default {
+  name: 'App',
+  components: {
+    AppBar,
+    Drawer
+  },
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  data: () => ({
+      items: [
+        { title: 'Servicios' },
+        { title: 'Nosotros' },
+        { title: 'Contacto' },
+      ],
+    }),
+  computed: {
+    ...mapState(["links"]),
+  },
+  methods: {
+    ...mapMutations({
+      setDrawer: "SET_DRAWER",
+    }),
+  },
+};
+</script>
+
+<style scoped>
+.vista-enter-active, .vista-leave-active {
+    transition: opacity .3s;
   }
+.vista-enter, .vista-leave-to{
+  opacity: 0;
 }
+
 </style>
