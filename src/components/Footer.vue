@@ -1,123 +1,148 @@
 <template>
-  <footer>
-      <div class="footer-menu">
-        <img src="" class="footer-img">
-        <div class="list-absolute mb-14">
-            <img src="@/assets/cerebro-tecnologia.jpeg" class="logo-kolibri-1 pl-sm-10 pl-lg-0">
-            <ul class="list-none">
-                <li class="text-bold">Enlances</li>
-                <li>Nosotros</li>
-                <li>Servicios</li>
-                <li>Contáctanos</li>
-            </ul>
-            <ul class="list-none">
-                <li class="text-bold">Contacto</li>
-                <li><v-icon color="#4F3701">mdi-whatsapp</v-icon><span> +569 12345678</span></li>
-                <li><v-icon color="#4F3701">mdi-email-outline</v-icon><span> IA@gmail.com</span></li>
-            </ul>
-            <div class="row only-mob">
-            <ul class="list-none-mob text-footer-mob mt-8">
-                <li><v-icon color="#0b0b0b">mdi-instagram</v-icon><span> @IA</span></li>
-                <li><v-icon color="#0b0b0b">mdi-whatsapp</v-icon><span> +569 12345678</span></li>
-                <li><v-icon color="#0b0b0b">mdi-email-outline</v-icon><span> IA@gmail.com</span></li>
-            </ul>
-            </div>
-      </div>
-      </div>
-      <div data-tf-widget="XPQEKFu0" style="width:100%;height:400px;"></div>
+  <v-footer dark>
+    <v-container class="d-flex mx-auto">
+      <v-col class=" mr-auto" cols="12" sm="6">
+        <v-container>
+          <div class="d-wrap">
+            <v-img
+              src="https://media.istockphoto.com/photos/artificial-intelligence-picture-id1147184161?k=20&m=1147184161&s=612x612&w=0&h=eY8rP4M5ucnGpuOqoZvmBkvQeCOoiMWSLx0G3Tytzxw="
+              height="150px"
+              width="150px"
+              class="mx-auto"
+            ></v-img>
+            <v-card-text class="text-center">
+              <v-card-subtitle class=" text-center d-sm-block">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Consectetur pariatur culpa quam earum ratione illum corrupti sed
+                saepe
+              </v-card-subtitle>
+              <v-btn
+                v-for="icon in icons"
+                :key="icon"
+                class="mx-4 white--text"
+                icon
+              >
+                <v-icon size="24px" color="#66FF00">
+                  {{ icon }}
+                </v-icon>
+              </v-btn>
+            </v-card-text>
+          </div>
+        </v-container>
+      </v-col>
+      <div class="mx-auto enlaces">
+        <v-col class="mr-auto" cols="12" sm="2">
+          <v-list sm="2" md="2"
+            >Enlaces
+            <v-list-item>
+              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#nosotros">
+                Nosotros
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn
+                exact
+                class="pl-0"
+                color="#DBDBDB"
+                plain
+                href="#soluciones"
+              >
+                Soluciones
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#contacto">
+                Contacto
+              </v-btn>
+            </v-list-item>
+          </v-list>
+        </v-col>
+        <v-divider></v-divider>
 
-  </footer>
+        <v-col class="d-flex enlacesServicios" cols="12" sm="4">
+          <v-list
+            >Soluciones
+            <v-list-item-group>
+              <v-list-item v-for="(item, i) in items" :key="i">
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-col>
+      </div>
+    </v-container>
+    <v-card-text class="white--text text-center">
+      {{ new Date().getFullYear() }} — <strong>by Vanessa Riquelme</strong>
+    </v-card-text>
+  </v-footer>
 </template>
 
-<script>
+<script scoped>
 export default {
-}
+  data: () => ({
+    icons: ["mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    items: [
+      {
+        icon: "mdi-inbox",
+        text: "Financial data extraction",
+      },
+      {
+        icon: "mdi-star",
+        text: "Predicción de la demanda",
+      },
+      {
+        icon: "mdi-send",
+        text: "lustering segmentation",
+      },
+      {
+        icon: "mdi-email-open",
+        text: "Optimización de procesos",
+      },
+      {
+        icon: "mdi-email-open",
+        text: "Modelos personalizados",
+      },
+    ],
+    model: 1,
+  }),
+};
 </script>
 
-<style>
-li, span {
-  font-family: "Montserrat", sans-serif;
+<style scoped>
+.enlaces {
+  display: none;
 }
-li {
-  font-weight: 500;
-}
-@media screen and (min-width: 899px) {
-.footer-menu {
-    display: flex;
+@media (min-width: 600px) {
+  .enlaces {
+    display: block;
     justify-content: space-around;
-    position: relative;
     align-items: center;
+  }
 }
-ul.list-none {
-    list-style-type: none;
-}
-li {
-    padding: 10px;
-    padding-right: 30px;
-}
-.list-absolute {
-    position: absolute;
+@media (min-width: 920px) {
+  .enlaces {
     display: flex;
     justify-content: space-around;
-}
-.text-bold {
-    font-weight: 700;
-    color: #0b0b0b;
-}
-.footer-img {
-    width: 100%;
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity: .4;
-}
-.logo-kolibri-1 {
-    height: 150px;
-    position: relative;
-    right: 50px;
-    border-radius: 20%;
-}
-.only-mob {
+    align-items: flex-start;
+  }
+  .v-divider {
     display: none;
+  }
 }
+.theme--dark {
+  background: none;
 }
-@media screen and (max-width: 898px) {
-    .footer-img {
-        width: 100%;
-        height: 180px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        opacity: .4;
-    }
-    .list-none {
-        display: none;
-    }
-    .logo-kolibri-1{
-        display: none;
-    }
-    .logo-kolibri-2{
-        height: 100px;
-        padding-left: 1rem;
-    }
-    .only-mob {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-    }
-    ul.list-none-mob {
-    list-style-type: none;
-    }
-    li {
-    padding: 7px;
-    padding-right: 30px;
-    }
-    .text-footer-mob {
-        color: #060606;
-    }
-    
+.v-list {
+  font-size: 1.2em;
+}
+.v-list-item {
+  padding: 0;
+  font-size: 0.5em;
+}
+.enlacesServicios {
+  font-size-adjust: inherit;
+}
+.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+  color: #dbdbdb !important;
 }
 </style>

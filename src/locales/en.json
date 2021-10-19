@@ -1,0 +1,54 @@
+{
+  "contacto": {
+    "titulo": "Contact us",
+    "info": "Enter your information to be able to communicate with us",
+    "label": {
+      "nombre": "Name",
+      "numero_empresa": "Company Number",
+      "nombre_empresa": "Company Name",
+      "mensaje": "Message"
+    },
+    "reglas": {
+      "nombre_requerido": "Your name is required",
+      "nombre_maximo": "Must be a maximum of 10 characters",
+      "email_requerido": "E-mail is required",
+      "email_invalido": "Invalid email eg: example@example.com",
+      "numero_requerido": "Your number is required",
+      "nombre-emp_requerido": "Your company name is required"
+    },
+    "alertas": {
+      "envio_correcto": "Sending successful !, Thank you for contacting us",
+      "datos_incompletos": "You must complete all the data"
+    },
+    "boton": "Send"
+  },
+  "nosotros": {
+    "titulo": "About us",
+    "masinfo": {
+      "mas_1": "The most difficult capabilities to achieve are those that require interaction with environments that are not restricted or previously prepared.",
+      "mas_2": "Las capacidades más complicadas de alcanzar son aquellas que requieren interaccionar con entornos no restringidos ni previamente preparados.",
+      "mas_3": "Las capacidades más complicadas de alcanzar son aquellas que requieren interaccionar con entornos no restringidos ni previamente preparados."
+    }
+  },
+  "soluciones": {
+    "titulo" : "Solutions",
+    "card": {
+      "titulo_card_1": "Financial data extraction",
+      "titulo_card_2": "Demand prediction",
+      "titulo_card_3": "Clustering segmentation",
+      "titulo_card_4": "Optimization of processes",
+      "titulo_card_5": "Custom models",
+      "texto_card_1": "Extract data from raw structured and unstructured documents collected through images and improve your data extraction processes in an automated way.",
+      "texto_card_2": "Predict the demand of your customers and optimize the supply and management decisions of your business. We use different machine learning and deep learning development techniques and frameworks to create the best demand forecasting model.",
+      "texto_card_3": "Identify fake news, filter spam and personalize your marketing strategies by segmenting your customers. We selected the best clustering algorithm that allows you to automatically discover natural groupings of events, people, and objects in large data sets.",
+      "texto_card_4": "Optimize your business costs. Implement artificial intelligence to ensure that your business processes are optimal. We help you by automating and reducing the volume of manual or inefficient steps required to prepare readable data.",
+      "texto_card_5": "We create, train, test and implement the best machine learning algorithms adjusted to the needs of your business. Simply integrate and apply AI to your solutions in real time."
+    }
+  },
+  "links": {
+    "inicio": "Home",
+    "contacto": "Contact",
+    "soluciones": "Solutions",
+    "nosotros": "About us"
+  }
+}

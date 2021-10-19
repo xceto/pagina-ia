@@ -13,6 +13,7 @@
 import AppBar from './components/AppBar'
 import Drawer from './components/Drawer'
 
+
 import { mapMutations, mapState } from "vuex";
 
 export default {
@@ -24,7 +25,7 @@ export default {
 
   data: () => ({
       items: [
-        { title: 'Servicios' },
+        { title: 'Soluciones' },
         { title: 'Nosotros' },
         { title: 'Contacto' },
       ],
@@ -36,16 +37,25 @@ export default {
     ...mapMutations({
       setDrawer: "SET_DRAWER",
     }),
-  },
-};
+    
+  }
+}
 </script>
 
+<style>
+html {
+  scroll-behavior: smooth;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #212121;
+}
+</style>
 <style scoped>
-.vista-enter-active, .vista-leave-active {
-    transition: opacity .3s;
-  }
-.vista-enter, .vista-leave-to{
+.vista-enter-active,
+.vista-leave-active {
+  transition: opacity 0.7s;
+}
+.vista-enter,
+.vista-leave-to {
   opacity: 0;
 }
-
 </style>

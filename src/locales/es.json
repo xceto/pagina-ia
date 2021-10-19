@@ -1,0 +1,54 @@
+{
+  "contacto": {
+    "titulo": "Contáctanos",
+    "info": "Ingresa tus datos para poder comunicarte con nosotros ",
+    "label": {
+      "nombre": "Nombre",
+      "numero_empresa": "Numero Empresa",
+      "nombre_empresa": "Nombre Empresa",
+      "mensaje": "Mensaje" 
+    },
+    "reglas": {
+      "nombre_requerido": "Su nombre es requerido",
+      "nombre_maximo": "Debe tener como máximo 10 caracteres",
+      "email_requerido": "E-mail es requerido",
+      "email_invalido": "E-mail inválido ej: ejemplo@ejemplo.com",
+      "numero_requerido": "Su numero es requerido",
+      "nombre-emp_requerido": "Su nombre de empresa es requerido"
+    },
+    "alertas": {
+      "envio_correcto": "Enviando exitoso!, gracias por contactarse con nosotros",
+      "datos_incompletos": "Debe completar todos los datos"
+    },
+    "boton": "Enviar"
+  },
+  "nosotros": {
+    "titulo": "Sobre nosotros",
+    "masinfo": {
+      "mas_1": "Las capacidades más complicadas de alcanzar son aquellas que requieren interaccionar con entornos no restringidos ni previamente preparados.",
+      "mas_2": "Las capacidades más complicadas de alcanzar son aquellas que requieren interaccionar con entornos no restringidos ni previamente preparados.",
+      "mas_3": "Las capacidades más complicadas de alcanzar son aquellas que requieren interaccionar con entornos no restringidos ni previamente preparados."
+    }
+  },
+  "soluciones": {
+    "titulo" : "Soluciones",
+    "card": {
+      "titulo_card_1": "Extracción de datos financieros",
+      "titulo_card_2": "Predicción de demanda",
+      "titulo_card_3": "Segmentación por clústeres",
+      "titulo_card_4": "Optimización de procesos",
+      "titulo_card_5": "Modelos personalizados",
+      "texto_card_1": "Extrae datos de documentos estructurados y no estructurados sin formato recopilados a través de imágenes y mejora tus procesos de extracción de datos de forma automatizada.",
+      "texto_card_2": "Predice la demanda de tus clientes y optimiza las decisiones de suministro y gestión de tu negocio. Utilizamos diferentes técnicas y marcos de desarrollo de aprendizaje automático y aprendizaje profundo para crear el mejor modelo de pronóstico de demanda.",
+      "texto_card_3": "Identifica noticias falsas, filtrar spam y personaliza tus estrategias de marketing segmentando a tus clientes. Seleccionamos el mejor algoritmo de agrupamiento que te permita descubrir automáticamente agrupaciones naturales de eventos, personas y objetos en grandes conjuntos de datos.",
+      "texto_card_4": "Optimiza los costos de tu negocio. Implementa inteligencia artificial para garantizar que los procesos de tu negocio sean los óptimos. Te ayudamos automatizando y disminuyendo el volumen de pasos manuales o ineficientes necesarios para preparar datos legibles.",
+      "texto_card_5": "Creamos, entrenamos, testeamos e implementamos los mejores algoritmos de aprendizaje automático ajustado a las necesidades de tu negocio. Simplemente integre y aplique IA en sus soluciones en tiempo real."
+    }
+  },
+  "links": {
+    "inicio": "Inicio",
+    "contacto": "Contacto",
+    "soluciones": "Soluciones",
+    "nosotros": "Sobre nosotros"
+  }
+}

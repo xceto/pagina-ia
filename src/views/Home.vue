@@ -1,18 +1,18 @@
 <template>
   <v-container  fluid>
     <Carousel />
-    <Servicios />
-    <Nosotros class="mt-10" />
-    <Ubicacion />
-    <Footer />
+    <Soluciones />
+    <Nosotros class="mt-10 fondo" />
+    <Contacto />
+    <Footer class="fondo"/>
   </v-container>
 </template>
 
 <script>
 import Carousel from '@/components/Carousel.vue'
 import Nosotros from '@/views/Nosotros.vue'
-import Ubicacion from '@/components/Ubicacion.vue'
-import Servicios from '@/views/Servicios.vue'
+import Soluciones from '@/views/Soluciones.vue'
+import Contacto from '@/views/Contacto.vue'
 import Footer from '@/components/Footer.vue'
 
   export default {
@@ -21,8 +21,8 @@ import Footer from '@/components/Footer.vue'
     components: {
       Carousel,
       Nosotros,
-      Servicios,
-      Ubicacion,
+      Soluciones,
+      Contacto,
       Footer
     },
     data: () => ({
@@ -31,6 +31,9 @@ import Footer from '@/components/Footer.vue'
   }
 </script>
 <style scoped>
+.fondo{
+  background-color: #212121;
+}
 .container{
   padding: 0;
 }

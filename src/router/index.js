@@ -1,47 +1,42 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Servicios from '../views/Servicios.vue'
-import Nosotros from '../views/Nosotros.vue'
-import Contacto from '../views/Contacto.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Soluciones from "../views/Soluciones.vue";
+import Nosotros from "../views/Nosotros.vue";
+import Contacto from "../views/Contacto.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/nosotros",
+    name: "Nosotros",
+    component: Nosotros,
   },
   {
-    path: '/nosotros',
-    name: 'Nosotros',
-    component: Nosotros
+    path: "/soluciones",
+    name: "Soluciones",
+    component: Soluciones,
   },
   {
-    path: '/servicios',
-    name: 'Servicios',
-    component: Servicios
-  },
-  {
-    path: '/contacto',
-    name: 'Contacto',
-    component: Servicios
-  },
-]
+    path: "/contacto",
+    name: "Contacto",
+    component: Contacto
+  }
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
