@@ -1,6 +1,7 @@
 <template>
   <div class="background-color mt-10 " id="contacto">
-    <v-container class="px-10">
+    <v-container class="px-10" data-aos="flip-right"
+          data-aos-easing="ease-out-cubic" data-aos-duration="3000">
       <v-row class="mt-3 mb-5 px-2">
         <v-col cols="12" sm="6" class="pl-3 px-md-0">
           <div class="styleInfo pt-6">
@@ -39,7 +40,7 @@
               outlined
               v-model="name"
               :counter="10"
-              :rules="nameRules"
+              :rules="nombreRequired"
               :label="$t('contacto.label.nombre')"
               :placeholder="$t('contacto.label.nombre')"
               required
@@ -48,7 +49,7 @@
             <v-text-field
               outlined
               v-model="email"
-              :rules="emailRules"
+              :rules="emailRequired"
               label="E-mail"
               placeholder="e-mail"
               required
@@ -56,7 +57,7 @@
             <v-text-field
               outlined
               v-model="phoneNumber"
-              :rules="numeroEmpresa"
+              :rules="numeroRequired"
               :counter="9"
               :label="$t('contacto.label.numero_empresa')"
               :placeholder="$t('contacto.label.numero_empresa')"
@@ -65,7 +66,7 @@
             <v-text-field
               outlined
               v-model="empresa"
-              :rules="empresaRules"
+              :rules="nombreEmpresaRequired"
               :label="$t('contacto.label.nombre_empresa')"
               :placeholder="$t('contacto.label.nombre_empresa')"
               required
@@ -77,10 +78,8 @@
               :label="$t('contacto.label.mensaje')"
               required
             ></v-textarea>
-            <div class="captchaTamano">
 
             <vue-recaptcha :sitekey="sitekey"></vue-recaptcha>
-            </div>
             <v-btn class="mr-4 mt-3" @click="enviar()" v-t="'contacto.boton'">
             </v-btn>
           </v-form>
@@ -101,29 +100,19 @@ export default {
     sitekey: process.env.VUE_APP_RECAPTCHA_TOKEN,
     valid: true,
     name: "",
-    nameRules: [
-      (v) => !!v || $t('contacto.reglas.nombre_requerido'),
-      (v) => (v && v.length <= 10) || "Debe tener como máximo 10 caracteres",
-    ],
     email: "",
-    emailRules: [
-      (v) => !!v || "$t('contacto.reglas.email_requerido')",
-      (v) => /.+@.+\..+/.test(v) || "E-mail inválido ej: ejemplo@ejemplo.com",
-    ],
     phoneNumber: "",
-    numeroEmpresa: [
-      (v) => /^(9|8|7)\\d{8}$/.test(v) || "$t('contacto.reglas.numero_requerido')",
-    ],
     empresa: "",
-    empresaRules: [(v) => !!v || "Su nombre de empresa es requerido"],
+    
   }),
   methods: {
     enviar() {
       if (this.name != "" && this.email != "" && this.phoneNumber != "" && this.empresa != ""){
 
-        alert("Enviando exitoso!, gracias por contactarse con nosotros");
+        alert(this.$t('contacto.alertas.envio_correcto'));
+        this.$refs.reset(form)
       }else{
-        alert('Debe completar todos los datos')
+        alert(this.$t('contacto.alertas.datos_incompletos'))
       }
     },
     validate() {
@@ -137,6 +126,33 @@ export default {
       recaptchaToken: recaptchaToken,
     });
   },
+  computed: {
+    nombreRequired(){
+      console.log('nameRules',nameRules)
+      const nameRules= [
+      (v) => !!v || this.$t('contacto.reglas.nombre_requerido'),
+      (v) => (v && v.length <= 10) || this.$t('contacto.reglas.nombre_maximo'),
+      ]
+      return nameRules
+    },
+    emailRequired(){
+      const emailRules = [
+      (v) => !!v || this.$t('contacto.reglas.email_requerido'),
+      (v) => /.+@.+\..+/.test(v) || this.$t('contacto.reglas.email_invalido'),
+      ]
+      return emailRules
+    },
+    numeroRequired(){
+      const numeroEmpresa= [
+      (v) => /^(9|8|7)\\d{8}$/.test(v) || this.$t('contacto.reglas.numero_requerido'),
+    ]
+    return numeroEmpresa
+    },
+    nombreEmpresaRequired(){
+      const empresaRules= [(v) => !!v || this.$t('contacto.reglas.nombre-emp_requerido')]
+      return empresaRules
+    }
+  }
 };
 </script>
 

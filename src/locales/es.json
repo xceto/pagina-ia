@@ -49,6 +49,9 @@
     "inicio": "Inicio",
     "contacto": "Contacto",
     "soluciones": "Soluciones",
-    "nosotros": "Sobre nosotros"
+    "nosotros": "Nosotros"
+  },
+  "tecnologias": {
+    "btn-mas" : "Conocer más"
   }
 }

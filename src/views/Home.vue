@@ -3,7 +3,8 @@
     <Carousel />
     <Soluciones />
     <Nosotros class="mt-10 fondo" />
-    <Contacto />
+    <Tecnologias />
+    <Contacto  class="fondo-contacto"/>
     <Footer class="fondo"/>
   </v-container>
 </template>
@@ -11,6 +12,7 @@
 <script>
 import Carousel from '@/components/Carousel.vue'
 import Nosotros from '@/views/Nosotros.vue'
+import Tecnologias from '@/components/Tecnologias.vue'
 import Soluciones from '@/views/Soluciones.vue'
 import Contacto from '@/views/Contacto.vue'
 import Footer from '@/components/Footer.vue'
@@ -21,6 +23,7 @@ import Footer from '@/components/Footer.vue'
     components: {
       Carousel,
       Nosotros,
+      Tecnologias,
       Soluciones,
       Contacto,
       Footer
@@ -33,6 +36,9 @@ import Footer from '@/components/Footer.vue'
 <style scoped>
 .fondo{
   background-color: #212121;
+}
+.fondo-contacto{
+  background-color: #dbdbdb50;
 }
 .container{
   padding: 0;

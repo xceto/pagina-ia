@@ -12,6 +12,7 @@ function loadLocaleMessages () {
       const locale = matched[1]
       messages[locale] = locales(key)
     }
+    
   })
   return messages
 }
@@ -25,6 +26,7 @@ function getLocale() {
 
   locale = userLocale ? userLocale.split("-")?.[0] : locale;
 
+  
   return locale;
 }
 
@@ -32,4 +34,5 @@ export default new VueI18n({
   locale: getLocale(),
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
   messages: loadLocaleMessages()
+  
 });

@@ -71,7 +71,7 @@ h2 {
   color: #dbdbdb;
 }
 .avatar{
-  width: 100px!important;
+  width: 50px!important;
   border-radius: 20%!important;
 }
 .nosotrosScroll {

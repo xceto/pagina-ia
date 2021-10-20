@@ -1,21 +1,26 @@
 <template>
   <v-navigation-drawer v-model="drawer" right fixed temporary>
     <v-list class="mt-3">
-      <v-list-item
-        v-for="(link, i) in links"
-        :key="i"
-        :to="{
-          name: link,
-        }"
-        min-width="118px"
-        exact
-        text
-        color="#5100d7"
-      >
-        <v-list-item-content>
-          <v-list-item-title color="#5100d7" v-text="link" />
-        </v-list-item-content>   
-      </v-list-item>
+      <v-list-item>
+              <v-btn exact class="pl-0" color="#5100d7" plain href="#nosotros" v-t="'nosotros.titulo'">
+              
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn
+                exact
+                class="pl-0"
+                color="#5100d7"
+                plain
+                href="#soluciones"
+                v-t="'soluciones.titulo'"
+              >
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn exact class="pl-0" color="#5100d7" plain href="#contacto" v-t="'contacto.titulo'">
+              </v-btn>
+            </v-list-item>
       <LocalSwitcher />
     </v-list>
   </v-navigation-drawer>
@@ -48,15 +53,25 @@ export default {
         this.$store.commit("SET_DRAWER", val);
       },
     },
+    linkDrawer(){
+      const links = [
+      'Home',
+      this.$t('links.nosotros'),
+      this.$t('links.soluciones'),
+      this.$t('links.contacto')
+    ]
+    return links
+    }
   },
 };
 </script>
 
 <style scoped>
-.v-list-item:hover {
+.v-list-item a:hover{
   text-decoration: none;
   color: #7e12c6;
   opacity: 0.7;
+  font-weight: bold;
 }
 .v-list-item {
   font-family: 'Source Sans Pro', sans-serif;

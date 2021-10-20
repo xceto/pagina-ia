@@ -17,16 +17,19 @@ const routes = [
     path: "/nosotros",
     name: "Nosotros",
     component: Nosotros,
+    alias: ['/About']
   },
   {
     path: "/soluciones",
     name: "Soluciones",
     component: Soluciones,
+    alias: ['/Solutions']
   },
   {
     path: "/contacto",
     name: "Contacto",
-    component: Contacto
+    component: Contacto,
+    alias: ['/Contact']
   }
 ];
 

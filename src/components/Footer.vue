@@ -30,13 +30,13 @@
           </div>
         </v-container>
       </v-col>
-      <div class="mx-auto enlaces">
-        <v-col class="mr-auto" cols="12" sm="2">
+      <div class="mx-auto enlaces" cols="12" md="6">
+        <v-col >
           <v-list sm="2" md="2"
             >Enlaces
             <v-list-item>
-              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#nosotros">
-                Nosotros
+              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#nosotros" v-t="'nosotros.titulo'">
+              
               </v-btn>
             </v-list-item>
             <v-list-item>
@@ -46,13 +46,12 @@
                 color="#DBDBDB"
                 plain
                 href="#soluciones"
+                v-t="'soluciones.titulo'"
               >
-                Soluciones
               </v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#contacto">
-                Contacto
+              <v-btn exact class="pl-0" color="#DBDBDB" plain href="#contacto" v-t="'contacto.titulo'">
               </v-btn>
             </v-list-item>
           </v-list>
@@ -60,13 +59,34 @@
         <v-divider></v-divider>
 
         <v-col class="d-flex enlacesServicios" cols="12" sm="4">
-          <v-list
-            >Soluciones
-            <v-list-item-group>
-              <v-list-item v-for="(item, i) in items" :key="i">
-                <v-list-item-title v-text="item.text"></v-list-item-title>
-              </v-list-item>
-            </v-list-item-group>
+          <v-list>
+
+          <h4 v-t="'soluciones.titulo'"></h4>
+          <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ $t('soluciones.card.titulo_card_1') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ $t('soluciones.card.titulo_card_2') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ $t('soluciones.card.titulo_card_3') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ $t('soluciones.card.titulo_card_4') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ $t('soluciones.card.titulo_card_5') }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
           </v-list>
         </v-col>
       </div>
@@ -81,30 +101,32 @@
 export default {
   data: () => ({
     icons: ["mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-    items: [
-      {
-        icon: "mdi-inbox",
-        text: "Financial data extraction",
-      },
-      {
-        icon: "mdi-star",
-        text: "Predicción de la demanda",
-      },
-      {
-        icon: "mdi-send",
-        text: "lustering segmentation",
-      },
-      {
-        icon: "mdi-email-open",
-        text: "Optimización de procesos",
-      },
-      {
-        icon: "mdi-email-open",
-        text: "Modelos personalizados",
-      },
-    ],
     model: 1,
   }),
+  // computed:{
+  //   items: [
+  //     {
+  //       icon: "mdi-inbox",
+  //       text: this.$t('soluciones.card.titulo_card_1'),
+  //     },
+  //     {
+  //       icon: "mdi-star",
+  //       text: "Predicción de la demanda",
+  //     },
+  //     {
+  //       icon: "mdi-send",
+  //       text: "lustering segmentation",
+  //     },
+  //     {
+  //       icon: "mdi-email-open",
+  //       text: "Optimización de procesos",
+  //     },
+  //     {
+  //       icon: "mdi-email-open",
+  //       text: "Modelos personalizados",
+  //     },
+  //   ],
+  // }
 };
 </script>
 
@@ -112,6 +134,7 @@ export default {
 .enlaces {
   display: none;
 }
+
 @media (min-width: 600px) {
   .enlaces {
     display: block;
@@ -119,7 +142,7 @@ export default {
     align-items: center;
   }
 }
-@media (min-width: 920px) {
+@media (min-width: 1024px) {
   .enlaces {
     display: flex;
     justify-content: space-around;
@@ -128,6 +151,11 @@ export default {
   .v-divider {
     display: none;
   }
+  .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 20%;
+}
 }
 .theme--dark {
   background: none;

@@ -35,20 +35,23 @@
     "card": {
       "titulo_card_1": "Financial data extraction",
       "titulo_card_2": "Demand prediction",
-      "titulo_card_3": "Clustering segmentation",
+      "titulo_card_3": "Cluster",
       "titulo_card_4": "Optimization of processes",
       "titulo_card_5": "Custom models",
-      "texto_card_1": "Extract data from raw structured and unstructured documents collected through images and improve your data extraction processes in an automated way.",
-      "texto_card_2": "Predict the demand of your customers and optimize the supply and management decisions of your business. We use different machine learning and deep learning development techniques and frameworks to create the best demand forecasting model.",
-      "texto_card_3": "Identify fake news, filter spam and personalize your marketing strategies by segmenting your customers. We selected the best clustering algorithm that allows you to automatically discover natural groupings of events, people, and objects in large data sets.",
-      "texto_card_4": "Optimize your business costs. Implement artificial intelligence to ensure that your business processes are optimal. We help you by automating and reducing the volume of manual or inefficient steps required to prepare readable data.",
-      "texto_card_5": "We create, train, test and implement the best machine learning algorithms adjusted to the needs of your business. Simply integrate and apply AI to your solutions in real time."
+      "texto_card_1": "Extract data from structured and unstructured raw documents collected through images and improve your data extraction processes in an automated way.",
+      "texto_card_2": "Predict your customer demand and optimize your business supply and management decisions. We use different machine learning and deep learning development techniques and frameworks to create the best demand forecasting model.",
+      "texto_card_3": "Identify fake news, filter spam and personalize your marketing strategies by segmenting your customers. We selected the best clustering algorithm that enables you to automatically discover natural groupings of events, people, and objects in large data sets.",
+      "texto_card_4": "Optimize your business costs. Implement artificial intelligence to ensure your business processes are optimal. We help you by automating and reducing the volume of manual or inefficient steps required to prepare readable data.",
+      "texto_card_5": "We create, train, test and implement the best machine learning algorithms tailored to the needs of your business. Simply integrate and apply AI to your solutions in real time."
     }
   },
   "links": {
     "inicio": "Home",
     "contacto": "Contact",
     "soluciones": "Solutions",
-    "nosotros": "About us"
+    "nosotros": "About"
+  },
+  "tecnologias": {
+    "btn-mas" : "Know more"
   }
 }
