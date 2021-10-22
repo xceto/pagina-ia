@@ -14,6 +14,7 @@
       "email_requerido": "E-mail es requerido",
       "email_invalido": "E-mail inválido ej: ejemplo@ejemplo.com",
       "numero_requerido": "Su numero es requerido",
+      "numero_maximo": "Debe tener como máximo 9 números",
       "nombre-emp_requerido": "Su nombre de empresa es requerido"
     },
     "alertas": {
@@ -52,6 +53,9 @@
     "nosotros": "Nosotros"
   },
   "tecnologias": {
+    "titulo": "Tecnologías",
+    "descripcion_gcp": "Google Cloud es una plataforma que ha reunido todas las aplicaciones de desarrollo web que Google estaba ofreciendo por separado.",
+    "descripcion_aws": "Amazon Web Services es una colección de servicios de computación en la nube pública que en conjunto forman una plataforma de computación en la nube, ofrecidas a través de Internet por Amazon.com.",
     "btn-mas" : "Conocer más"
   }
 }

@@ -80,7 +80,7 @@
             ></v-textarea>
 
             <vue-recaptcha :sitekey="sitekey"></vue-recaptcha>
-            <v-btn class="mr-4 mt-3" @click="enviar()" v-t="'contacto.boton'">
+            <v-btn class="mr-4 mt-3" @click="enviar()" block v-t="'contacto.boton'">
             </v-btn>
           </v-form>
         </v-col>
@@ -144,7 +144,8 @@ export default {
     },
     numeroRequired(){
       const numeroEmpresa= [
-      (v) => /^(9|8|7)\\d{8}$/.test(v) || this.$t('contacto.reglas.numero_requerido'),
+      (v) => /^(9|8|7)\\d{9}$/.test(v) || this.$t('contacto.reglas.numero_requerido'),
+      (v) => (v && v.length <= 9) || this.$t('contacto.reglas.numero_maximo'),
     ]
     return numeroEmpresa
     },

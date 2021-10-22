@@ -1,6 +1,6 @@
 <template>
 <div class="">
-    <h2 class="text-center">Tecnologías</h2>
+    <h2 class="text-center" v-t="'tecnologias.titulo'">Tecnologías</h2>
 
   <v-container   class="card-tecnologias" sm="12" md="6" data-aos="flip-left"
           data-aos-easing="ease-out-cubic" data-aos-duration="3000">
@@ -18,7 +18,7 @@
         <v-list-item-title class="text-h6 mb-1">
           Google Cloud Platform
         </v-list-item-title>
-        <v-list-item-subtitle>Google Cloud es una plataforma que ha reunido todas las aplicaciones de desarrollo web que Google estaba ofreciendo por separado.</v-list-item-subtitle>
+        <v-list-item-subtitle v-t="'tecnologias.descripcion_gcp'"></v-list-item-subtitle>
       </v-list-item-content>
 
       <v-list-item-avatar
@@ -31,6 +31,7 @@
         outlined
         rounded
         color="purple"
+        target="_blank"
         href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiYoaqindnzAhWRDJEKHcIeB84YABAAGgJjZQ&ohost=www.google.com&cid=CAESQeD2-C5SMHopr55sFWB0FE49wTJAOgtKMDlgrZoFldqtG6J8CbuwEs5FOkSGXzDt61vqmzUFDCIw7LHCaEVZ_vBO&sig=AOD64_3ZGnNSIqJqxsL_0oAv5UYHQTw2kA&q&adurl&ved=2ahUKEwinx6CindnzAhWrKLkGHbZPD5UQ0Qx6BAgCEAE"
         v-t="'tecnologias.btn-mas'"
       >
@@ -52,12 +53,12 @@
         <v-list-item-title class="text-h6 mb-1">
           AWS
         </v-list-item-title>
-        <v-list-item-subtitle>Amazon Web Services es una colección de servicios de computación en la nube pública que en conjunto forman una plataforma de computación en la nube, ofrecidas a través de Internet por Amazon.com. </v-list-item-subtitle>
+        <v-list-item-subtitle v-t="'tecnologias.descripcion_aws'"></v-list-item-subtitle>
       </v-list-item-content>
 
       <v-list-item-avatar
         size="80"
-      > <v-img src="@/assets/logo-aws-yellow.png"></v-img></v-list-item-avatar>
+      > <v-img src="@/assets/logo-aws-yellow.png" ></v-img></v-list-item-avatar>
     </v-list-item>
 
     <v-card-actions>
@@ -65,6 +66,7 @@
         outlined
         rounded
         color="purple"
+        target="_blank"
         href="https://aws.amazon.com/es/"
         v-t="'tecnologias.btn-mas'"
       >
@@ -80,6 +82,9 @@ export default {
 }
 </script>
 <style scoped>
+h2{
+  font-size: 2.2em;
+}
 .theme--light.v-sheet--outlined {
   border: none;
 }

@@ -14,6 +14,7 @@
       "email_requerido": "E-mail is required",
       "email_invalido": "Invalid email eg: example@example.com",
       "numero_requerido": "Your number is required",
+      "numero_maximo": "It must have a maximum of 9 numbers",
       "nombre-emp_requerido": "Your company name is required"
     },
     "alertas": {
@@ -52,6 +53,9 @@
     "nosotros": "About"
   },
   "tecnologias": {
+    "titulo": "Technologies",
+    "descripcion_gcp": "Google Cloud is a platform that has brought together all the web development applications that Google was offering separately.",
+    "descripcion_aws": "Amazon Web Services is a collection of public cloud computing services that together form a cloud computing platform, offered over the Internet by Amazon.com.",
     "btn-mas" : "Know more"
   }
 }
