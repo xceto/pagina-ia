@@ -55,7 +55,7 @@ img {
   text-transform: capitalize;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 1em;
 }
 .lenguaje {
   color: #dbdbdb;
